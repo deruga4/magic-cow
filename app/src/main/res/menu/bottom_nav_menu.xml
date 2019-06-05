@@ -10,8 +10,5 @@
             android:id="@+id/navigation_dashboard"
             android:icon="@drawable/ic_new"
             android:title="@string/title_add"/>
-    <item
-            android:id="@+id/navigation_settings"
-            android:icon="@drawable/ic_settings"
-            android:title="@string/title_settings"/>
+
 </menu>

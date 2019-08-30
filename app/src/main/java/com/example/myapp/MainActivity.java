@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -88,8 +89,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Spinner spinner = findViewById(R.id.group_choice);
         List<String> list = new ArrayList<String>();
 
-        this.choices.forEach((key, value) -> System.out.println(key + " = " + value));
-
         for (String item : choices.keySet()) {
             list.add(item);
         }
@@ -161,10 +160,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         // TODO: change current list upon selection.
+        Log.d("STATE", "onItemSelected");
+        String[] listNames = (String[]) this.choices.keySet().toArray();
+        Log.d("STATE", listNames.toString());
+        System.out.println(adapterView.getItemAtPosition(i).toString());
+        this.setCurrentListName(adapterView.getItemAtPosition(i).toString());
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-
+        Log.d("STATE", "onNothingSelected");
     }
 }

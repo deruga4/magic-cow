@@ -11,4 +11,4 @@ Simply enter your options into the magic cow, and it will decide for you!
   - Make an EditActivity layout that shows all the list
   - Make an EditListActivity layout to change the entries within the list
 - Change the current list
-- Horizontal layout
+- Make a good horizontal layout, current one is OK but not clean
